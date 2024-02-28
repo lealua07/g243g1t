@@ -4,3 +4,19 @@ button {
 body {
     background-color: black;
 }
+.tablet { 
+    display: none;
+}
+.desktop { 
+    display: none;
+}
+.barra { 
+    width: 100%;
+    height: 80px;
+    background-color: blueviolet;
+    text-align: center;
+}
+.mobile {
+    font-size: 60px;
+    color: fuchsia;
+}
