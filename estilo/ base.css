@@ -20,3 +20,28 @@ body {
     font-size: 60px;
     color: fuchsia;
 }
+@media (min-width:720px){
+    .barra { 
+        height: 80px;
+        background-color: rgb(117, 73, 158);
+    } 
+    .mobile { 
+        display: none;
+    } 
+    .tablet{ 
+        display: inline;
+        font-size: 60px;
+        color: lightblue;
+    } 
+}
+@media (min-width: 1228px) {
+    .barra {
+        height: 100px;
+        background-color: aquamarine;
+    }
+    .tablet {
+        display: inline;
+        font-size: 90px;
+        color: aqua;
+    }
+}
