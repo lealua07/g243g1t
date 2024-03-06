@@ -1,3 +1,3 @@
 function aperta(){
-    alert("Oi, abençoado!");
+    alert("Oi, gata(o)!");
 }
