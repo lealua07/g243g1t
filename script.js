@@ -49,3 +49,20 @@ document.getElementById("h").innerHTML = h+":"+ m + ":" + s;
 setInterval(() => {
     hora_atual();
 }, 1000);
+
+function contador(){
+    let inicio = document.getElementById("inicio").value;
+    let fim = document.getElementById("fim").value;
+    if(inicio == fim){
+        contador.clearInterval();
+    }else{
+     inicio++;
+     document.getElementById("valor").innerHTML = inicio;
+    }
+}
+     let contar = null;
+     function iniciarContagem(){
+        let contar = setInterval(() => {
+            contador();
+        }, 1000);
+     }
