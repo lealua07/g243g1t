@@ -100,9 +100,9 @@ body {
        color: rgb(40, 105, 136);
    }
    .mobile{
-       display: none;
-   }  
-   .tablet {
+    display: none;
+}  
+.tablet {
        display: none;
        font-size: 60px;
        color: rgb(84, 30, 95);
