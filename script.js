@@ -17,6 +17,7 @@ function abrir(num) {
     if(num == "3"){
         document.getElementById("aba3").disabled = true;
         document.getElementById("a3").style.display = "block";
+    
     }
     if(num == "4"){
         document.getElementById("aba4").disabled = true;
