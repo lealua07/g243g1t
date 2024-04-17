@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./script/script.js"></script>
-    <link rel="stylesheet" href="./estilo/base.css">
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="/estilo/ base.css">
+    <script src="./script/estruturas.js"></script>
 </head>
 <body>
     <header class="barra">
@@ -13,6 +14,7 @@
         <span class="tablet">Tablet</span>
         <span class="desktop">Desktop</span>
     </header>
+
     <section class="conteudo">
         <div class="botoes">
             <button id="aba1" class="btn" onclick="abrir(1)">Aba 1</button>
@@ -24,17 +26,40 @@
         <div class="abas">
             <div id="a1" class="aba1">
                 <span id="h"></span>
-            </div>
+        </div>
+        
             <div id="a2" class="aba2">
-                Contar de: <input type="number" id="inicio">
-                até: <input type="number" id="fim">
+                Contar de: <input type="number" id="inicio"> 
+                ate: <input type="number" id="fim"><br>
+                <button onclick="iniciarContagem()">Contar</button> <br>
+                
+                <span id="valor"></span>
+            </div>
+
+
+            <div id="a3" class="aba3">
+                <h3>Alarme</h3>
+                <input type="number" id="hd" max="23" min="0" class="desp" >;
+                <input type="number" id="md" max="59" min="0" class="desp" >;
+                <input type="number" id="sd" max="59" min="0" class="desp" >;
+                <br></br>
+                <button onclick="ligar_alarme()">Ligar Alarme</button>
+            </div>
+            <div id="a4" class="aba4">
+                <div class="minha_fila"><span id="fila">Nao tem fila</span></div>
 
             </div>
-            <div id="a3" class="aba3">Estou na Aba 3</div>
-            <div id="a4" class="aba4">Estou na Aba 4</div>
             <div id="a5" class="aba5">Estou na Aba 5</div>
         </div>
         
-    </section>    
+
+
+
+
+
+
+
+    </section>
+    
 </body>
 </html>

@@ -17,7 +17,6 @@ function abrir(num) {
     if(num == "3"){
         document.getElementById("aba3").disabled = true;
         document.getElementById("a3").style.display = "block";
-    
     }
     if(num == "4"){
         document.getElementById("aba4").disabled = true;
@@ -28,42 +27,50 @@ function abrir(num) {
         document.getElementById("a5").style.display = "block";
     }
 
+
+   
 }
 
-function hora_atual (){
-   const d = new Date();
-   let h = d.getHours();
-   let m = d.getMinutes();
-   let s = d.getSeconds();
-   if( s < 10){
-   s = "0"+s;
-}
-if (h < 10){
-    h = "0"+h;
-}
-if (m < 10){
-    m = "0"+m;
-}
-document.getElementById("h").innerHTML = h+":"+ m + ":" + s;
-
+    function hora_atual(){
+        const d = new Date();
+        let h = d.getHours();
+        let m = d.getMinutes();
+        let s = d.getSeconds();
+        if( s < 10){
+            s = "0"+s;
+        }
+        if( h < 10){
+            h = "0"+h;
+        }
+        if( m < 10){
+            m = "0"+m;
+        }
+        
+        document.getElementById("h").innerHTML = h+":"+ m +":"+s;
+        
 }
 setInterval(() => {
     hora_atual();
 }, 1000);
 
 function contador(){
-    let inicio = document.getElementById("inicio").value;
-    let fim = document.getElementById("fim").value;
     if(inicio == fim){
-        contador.clearInterval();
+        contar.clearInterval();
     }else{
-     inicio++;
-     document.getElementById("valor").innerHTML = inicio;
+        inicio++;
+        document.getElementById("valor").innerHTML = inicio;
     }
 }
-     let contar = null;
-     function iniciarContagem(){
-        let contar = setInterval(() => {
-            contador();
-        }, 1000);
-     }
+
+
+let contar = null;
+let inicio = 0;
+let fim = 0;
+function iniciarContagem(){
+     inicio = document.getElementById("inicio").value;
+     fim = document.getElementById("fim").value;
+    contar = setInterval(() => {
+        contador();
+    }, 1000);
+}
+
