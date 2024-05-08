@@ -16,7 +16,11 @@ const desenfilerar = () => {
     return retirado;
 }
 const imprimir = () =>  {
-    document.getElementById(saidaFila).innerHTML = dados
+    let dadosSaida = "";
+    for(let i=0; i <tamanhoFila(); i++){
+        dadosSaida += "["+dados[i].id + "("+dados[i].itens+")] ";
+    }
+    document.getElementById(saidaFila).innerHTML = dadosSaida;
 }
 return {enfileirar, desenfilerar}
 }
