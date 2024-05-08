@@ -24,7 +24,6 @@ const imprimir = () =>  {
 }
 return {enfileirar, desenfilerar}
 }
-
 const f1 = Fila("saidaFila1");
 const gerarItens = () => Math.floor(Math.random() * (15 - 3) + 2);
 const Cliente = (_id,itens) =>{
@@ -33,8 +32,17 @@ const Cliente = (_id,itens) =>{
         itens:_itens
     }
 }
+const caixalChamaProximo = () =>{
+    let cliente = f1.desenfilerar();
+    let tempo = 200;
+    if(cliente){
+        tempo = cliente.tempo * 1000;
+        setTimeout(caixa1ChamaProximo,tempo);
+    }
+}
 (function(){
 for(let i=l; i<= 15; i++){
     f1.enfileirar(Cliente("C"+i,gerarItens()));
 }
+caixa1ChamaProximo();
 })();
