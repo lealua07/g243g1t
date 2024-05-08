@@ -31,6 +31,6 @@ const Cliente = (_id,itens) =>{
 }
 (function(){
 for(let i=l; i<= 15; i++){
-    f1.enfileirar(i);
+    f1.enfileirar(Cliente("C"+i,gerarItens()));
 }
 })();
